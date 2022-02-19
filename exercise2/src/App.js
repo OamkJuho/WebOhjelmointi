@@ -3,6 +3,7 @@ import Title from './components/Title';
 import ShoppingList from './components/ShoppingList';
 import styles from './App.module.css';
 import './App.css';
+import { useState } from 'react';
 
 /* A ES6 class style stateful component for the shopping list application */
 class App extends React.Component {
@@ -23,16 +24,25 @@ class App extends React.Component {
     };
 
   }
-
+  
   render()
+  
   {
     const { applicationDescription, applicationName } = this.props;
+    const [ counterValue, setCounterValue ] = useState(0);
     return <div className={ styles.shoppingList }>
       <Title 
         applicationDescription={ applicationDescription }
         applicationName={ applicationName }
       />
       <ShoppingList items={ this.state.items } />
+      <div>
+        <div>laskuri: { counterValue }</div>
+        <button onClick={this.props}>Milk</button>
+        <button>Bread</button>
+        <button>Chips</button>
+        <button>Beer</button>
+      </div>
     </div>
   }
 }
