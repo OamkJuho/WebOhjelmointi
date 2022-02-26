@@ -1,22 +1,25 @@
-import React from 'react';
+import React from "react";
+import HS from './HS.png'
 
 export default function Header() {
-  return <div className="titlebar">
-    <div className="title">
-
-      <div className="bigTitle">UUUTISLEHTI</div>
-
-        <div className="smallTitle">Etusivu</div>
-        <div className="smallTitle">Uutiset</div>
-        <div className="smallTitle">Lehdet</div>
-        <div className="smallTitle">Asiakaspalvelu</div>
-
-        <div className="space"> </div>
-
-        <div className="tilaa">Tilaa</div>
-        <div className="kirjaudu">Kirjaudu <i class="fas fa-bars"></i></div>
-        <div className="valikko">Valikko</div>
-
-    </div>     
-  </div>;
+    return(
+        <div className="headerOut">
+            <div className="center">
+                <div className="headerLeft">
+                    <div><img className="img" src={HS}/></div>
+                    <div className="headerCenter">
+                        <div className="headerElement">Etusivu</div>
+                        <div className="headerElement">Uutiset</div>
+                        <div className="headerElement">Lehdet</div>
+                        <div className="headerElement">Asiakaspalvelu</div>
+                    </div>
+                </div>
+                <div className="headerRight"> 
+                    <div className="order">Tilaa</div>
+                    <div className="headerElement">Kirjaudu</div>
+                    <div className="headerElement">Valikko</div>
+                </div>
+            </div>
+        </div>
+    );
 }
